@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { portfolioData } from "../data/portfolio";
 import { Mail, ArrowRight } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../components/Icons";
-import profilePic from "../assets/profile.png";
+import profilePic from "../assets/profile.jpg";
 
 export const Hero = () => {
   return (
