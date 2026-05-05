@@ -12,9 +12,10 @@ export const Projects = () => {
           {portfolioData.projects.map((project, index) => (
             <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
               {/* Project Image */}
+                                <a href={project.links.web} target="_blank" rel="noopener noreferrer">
               <div className="glass-card p-0 overflow-hidden aspect-video bg-white flex items-start justify-center relative group border border-slate-100">
                 {project.image ? (
-                  <img src={project.image} alt={project.title} className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+                    <img src={project.image} alt={project.title} className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
                 ) : (
                   <div className="text-slate-400 font-medium transition-transform duration-500 group-hover:scale-110">
                     {project.title} Preview
@@ -34,6 +35,7 @@ export const Projects = () => {
                   )}
                 </div>
               </div>
+              </a>
 
               {/* Project Info */}
               <div>

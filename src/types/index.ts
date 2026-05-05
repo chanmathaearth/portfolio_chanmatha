@@ -7,6 +7,7 @@ export interface Project {
   links: {
     github?: string;
     demo?: string;
+    web?: string;
   };
   image?: string;
 }
@@ -60,4 +61,5 @@ export interface PortfolioData {
     name: string;
     level: string;
   }[];
+  activities: string[];
 }

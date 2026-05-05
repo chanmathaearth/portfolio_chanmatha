@@ -34,9 +34,9 @@ export const Navbar = () => {
           href="#"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="text-xl font-bold gradient-text"
+          className="text-xl font-bold"
         >
-          Chanmatha.
+          Portfolio.
         </motion.a>
 
         {/* Desktop Nav */}

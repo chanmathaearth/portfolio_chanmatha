@@ -1,5 +1,6 @@
 import type { PortfolioData } from "../types";
 import childhoodImg from "../assets/project-childhood.png";
+import studforceImg from "../assets/studforce.png";
 
 export const portfolioData: PortfolioData = {
   name: "Chanmatha Sanguansap",
@@ -51,8 +52,28 @@ export const portfolioData: PortfolioData = {
       links: {
         github: "https://github.com/chanmathaearth/Youthapp",
         demo: "https://drive.google.com/file/d/11hUyFy-Z7475JLHbw8-tZTXDyPfgPSGB/view?pli=1",
+        web: "https://youthapp-web.vercel.app/",
       },
       image: childhoodImg,
+    },
+    {
+      title: "Studforce — Football Boots E-Commerce Platform",
+      date: "Jan 2024 – Mar 2024",
+      description:
+        "Developed a full-stack e-commerce web application for football boots with a modern UI, secure authentication, and integrated online payment system.",
+      highlights: [
+        "Implemented JWT authentication (register, login, secure routes)",
+        "Built product browsing with filtering by brand, size, and category",
+        "Developed shopping cart, checkout flow, and order history tracking",
+        "Integrated Stripe payment gateway for secure online transactions",
+        "Designed admin panel for product CRUD operations and order management",
+      ],
+      tech: ["Vue.js", "Tailwind CSS", "Django REST Framework", "PostgreSQL", "JWT", "Stripe", "Docker"],
+      links: {
+        web: "https://studforce.vercel.app/",
+        github: "https://github.com/chanmathaearth/STUDFORCE_FE.git",
+      },
+      image: studforceImg,
     },
   ],
   experience: [
@@ -92,5 +113,10 @@ export const portfolioData: PortfolioData = {
   languages: [
     { name: "Thai", level: "Native" },
     { name: "English", level: "B2 Upper Intermediate" },
+  ],
+  activities: [
+    "Taught basic Python programming in a camp, helping beginners understand programming fundamentals and logical thinking",
+    "Participated in football competitions, demonstrating teamwork and discipline",
+    "Competed in music performance events, showing creativity and confidence under pressure",
   ],
 };
