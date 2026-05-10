@@ -16,7 +16,7 @@ export const portfolioData: PortfolioData = {
   skills: [
     {
       category: "Frontend",
-      skills: ["React", "Vue.js", "Next.js", "Tailwind CSS"],
+      skills: ["React", "Next.js", "Vue.js", "Tailwind CSS"],
     },
     {
       category: "Backend",
@@ -28,7 +28,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       category: "Tools",
-      skills: ["Docker", "Git", "Postman", "Swagger"],
+      skills: ["Docker", "Git", "Postman", "Swagger", "Jest"],
     },
     {
       category: "Cloud",
@@ -38,17 +38,17 @@ export const portfolioData: PortfolioData = {
   projects: [
     {
       title: "Child Development Monitoring & Evaluation System",
-      date: "Aug 2025 - Aug 2026",
+      date: "Apr 2025 - Apr 2026",
       description:
         "Developed a full-stack child development monitoring system actively used by healthcare staff, in collaboration with the Faculty of Nursing, Burapha University.",
       highlights: [
-        "Built RESTful APIs and frontend using Django REST Framework and React",
-        "Integrated LINE chatbot with LLM Gemini to provide personalized insights for parents",
-        "Reduced reliance on paper-based processes by digitizing data management",
-        "Improved workflow efficiency for healthcare staff",
-        "Deployed containerized applications using Docker on GCP VM and Vercel",
+    "Built a full-stack child development monitoring platform for healthcare staff to manage users, classrooms, child records, dashboards, and assessment workflows.",
+    "Developed weight and height assessment features with graph-based visualization based on Thai Ministry of Public Health growth standards.",
+    "Integrated LINE LIFF and Gemini LLM to build a parent-facing chatbot, allowing parents to securely access personalized child development data through LINE.",
+    "Replaced manual paper-based assessment workflows with a centralized web-based system, eliminating paper records and improving data accessibility for healthcare staff.",
+    "Deployed containerized applications using Docker on GCP VM and Vercel."
       ],
-      tech: ["React", "Django REST Framework", "MySQL", "Docker", "GCP", "LINE API", "LLM Gemini"],
+      tech: ["React", "Django REST Framework", "MySQL", "Docker", "GCP", "LINE API", "LIFF", "LLM Gemini"],
       links: {
         github: "https://github.com/chanmathaearth/Youthapp",
         demo: "https://drive.google.com/file/d/11hUyFy-Z7475JLHbw8-tZTXDyPfgPSGB/view?pli=1",
@@ -62,11 +62,10 @@ export const portfolioData: PortfolioData = {
       description:
         "Developed a full-stack e-commerce web application for football boots with a modern UI, secure authentication, and integrated online payment system.",
       highlights: [
-        "Implemented JWT authentication (register, login, secure routes)",
-        "Built product browsing with filtering by brand, size, and category",
-        "Developed shopping cart, checkout flow, and order history tracking",
+        "Implemented JWT authentication, shopping cart, checkout flow, and order history tracking",
+        "Built product browsing and filtering by brand, size, and category",
         "Integrated Stripe payment gateway for secure online transactions",
-        "Designed admin panel for product CRUD operations and order management",
+        "Designed admin panel for product and order management",
       ],
       tech: ["Vue.js", "Tailwind CSS", "Django REST Framework", "PostgreSQL", "JWT", "Stripe", "Docker"],
       links: {
@@ -84,11 +83,11 @@ export const portfolioData: PortfolioData = {
       description:
         "Developed a full-stack Smart Medical Inventory system for hospital equipment management using React, Node.js, and MongoDB.",
       highlights: [
-        "Implemented Purchase Order PO management system",
-        "Built inventory tracking and reporting features",
-        "Developed responsive web application for procurement workflows",
-        "Collaborated in Agile team environment with developers and designers",
-        "Improved workflow efficiency and reduced manual errors in procurement process",
+    "Implemented inventory tracking features for monitoring stock levels and expiration status of medical supplies.",
+    "Developed Purchase Order (PO) and requisition workflows to support laboratory procurement processes.",
+    "Built responsive internal web interfaces and reporting features for inventory management operations.",
+    "Collaborated in an Agile team environment with developers and designers.",
+    "Helped reduce manual inventory management tasks through centralized web-based workflows."
       ],
       tech: ["React", "Node.js Express", "MongoDB", "Docker", "Storybook"],
       links: {
@@ -117,6 +116,5 @@ export const portfolioData: PortfolioData = {
   activities: [
     "Taught basic Python programming in a camp, helping beginners understand programming fundamentals and logical thinking",
     "Participated in football competitions, demonstrating teamwork and discipline",
-    "Competed in music performance events, showing creativity and confidence under pressure",
   ],
 };
