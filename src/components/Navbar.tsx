@@ -36,7 +36,7 @@ export const Navbar = () => {
           animate={{ opacity: 1 }}
           className="text-xl font-bold"
         >
-          Portfolio.
+          Chanmatha.
         </motion.a>
 
         {/* Desktop Nav */}
