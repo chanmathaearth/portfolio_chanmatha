@@ -114,7 +114,7 @@ export const portfolioData: PortfolioData = {
     { name: "English", level: "B2 Upper Intermediate" },
   ],
   activities: [
-    "Taught basic Python programming in a camp, helping beginners understand programming fundamentals and logical thinking",
-    "Participated in football competitions, demonstrating teamwork and discipline",
+    "Created coding materials and helped teach programming basics in coding camps",
+    "Participated in music and sports competitions, demonstrating teamwork and discipline",
   ],
 };
