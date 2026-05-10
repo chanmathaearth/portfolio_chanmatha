@@ -7,8 +7,8 @@ export const About = () => {
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
         <div className="glass-card">
-          <p className="text-lg leading-relaxed text-slate-600 italic">
-            "{portfolioData.summary}"
+          <p className="text-lg leading-8 text-slate-600 text-justify">
+            {portfolioData.summary}
           </p>
         </div>
       </div>
