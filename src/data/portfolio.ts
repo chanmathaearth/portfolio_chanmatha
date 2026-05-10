@@ -6,7 +6,7 @@ export const portfolioData: PortfolioData = {
   name: "Chanmatha Sanguansap",
   role: "Junior Full-Stack Developer",
   summary:
-    "Junior Full-Stack Developer with hands-on experience building real-world applications used by healthcare staff and end users. Experienced in developing and deploying containerized web systems across frontend and backend, with a focus on practical, user-centered solutions. Fast learner with strong problem-solving skills, ready to contribute in a professional development team.",
+    "Junior Full-Stack Developer with experience building and deploying real-world web applications and LINE-integrated systems for healthcare and operational workflows. Experienced in both frontend and backend development, including RESTful APIs, AI-integrated features, and containerized deployment. Fast learner with strong problem-solving skills, able to adapt quickly, leverage AI tools to improve development efficiency, and contribute effectively within development teams.",
   contact: {
     phone: "0631174147",
     email: "chanmathaearth@gmail.com",
