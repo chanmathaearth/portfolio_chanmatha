@@ -71,7 +71,7 @@ export const Hero = () => {
               <img
                 src={profilePic}
                 alt="Profile"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain scale-120"
               />
             </div>
           </motion.div>
