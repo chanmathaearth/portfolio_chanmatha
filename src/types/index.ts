@@ -45,6 +45,7 @@ export interface SkillGroup {
 export interface PortfolioData {
   name: string;
   role: string;
+  tagline: string;
   summary: string;
   contact: {
     phone: string;

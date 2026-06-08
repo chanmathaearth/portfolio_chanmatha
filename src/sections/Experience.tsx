@@ -1,4 +1,5 @@
 import { Section } from "../components/Section";
+import { motion } from "framer-motion";
 import { portfolioData } from "../data/portfolio";
 import { Briefcase, Calendar, CheckCircle2, ExternalLink } from "lucide-react";
 
@@ -9,7 +10,14 @@ export const Experience = () => {
         <h2 className="text-3xl font-bold mb-12 text-center">Work Experience</h2>
         <div className="space-y-8">
           {portfolioData.experience.map((exp, index) => (
-            <div key={index} className="glass-card">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
+              key={index}
+              className="glass-card"
+            >
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
                 <div>
                   <div className="flex items-center gap-2 text-accent-purple mb-1">
@@ -50,7 +58,7 @@ export const Experience = () => {
                   </a>
                 </div>
               )}
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

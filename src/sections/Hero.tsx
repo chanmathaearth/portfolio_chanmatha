@@ -10,37 +10,34 @@ export const Hero = () => {
       {/* Background Animated Glow */}
       <motion.div
         animate={{
-          scale: [1, 1.2, 1],
-          x: [0, 50, 0],
-          y: [0, 30, 0],
+          scale: [1, 1.05, 1],
+          opacity: [0.6, 0.8, 0.6],
         }}
         transition={{
-          duration: 20,
+          duration: 10,
           repeat: Infinity,
-          ease: "linear"
+          ease: "easeInOut"
         }}
-        className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent-blue/5 blur-[120px] rounded-full pointer-events-none"
+        style={{ willChange: "transform, opacity" }}
+        className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-accent-blue/5 blur-[80px] rounded-full pointer-events-none transform-gpu"
       />
 
       {/* Background Blobs with Slow Floating Motion */}
       <motion.div
         animate={{
-          y: [0, -20, 0],
-          x: [0, 10, 0],
-          rotate: [0, 5, 0]
+          y: [0, -15, 0],
         }}
-        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-        className="blob top-[-10%] left-[-10%] opacity-20"
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+        style={{ willChange: "transform" }}
+        className="blob top-[-10%] left-[-10%] opacity-20 transform-gpu"
       />
       <motion.div
         animate={{
-          y: [0, 20, 0],
-          x: [0, -15, 0],
-          rotate: [0, -5, 0]
+          y: [0, 15, 0],
         }}
-        transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
-        className="blob bottom-[-10%] right-[-10%] opacity-15"
-        style={{ background: 'linear-gradient(180deg, rgba(168, 85, 247, 0.2) 0%, rgba(6, 182, 212, 0.2) 100%)' }}
+        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+        style={{ background: 'linear-gradient(180deg, rgba(168, 85, 247, 0.2) 0%, rgba(6, 182, 212, 0.2) 100%)', willChange: "transform" }}
+        className="blob bottom-[-10%] right-[-10%] opacity-20 transform-gpu"
       />
 
       <div className="max-w-4xl mx-auto px-6 text-center z-10">
@@ -76,12 +73,24 @@ export const Hero = () => {
             </div>
           </motion.div>
         </motion.div>
-
+        {portfolioData.tagline && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15, duration: 0.6 }}
+            className="mb-5"
+          >
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest border border-accent-blue/30 text-accent-blue bg-blue-50/50 backdrop-blur-sm shadow-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent-blue animate-pulse" />
+              {portfolioData.tagline}
+            </span>
+          </motion.div>
+        )}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="text-5xl md:text-7xl font-bold mb-4 tracking-tight"
+          className="text-5xl md:text-7xl font-bold mb-4 tracking-tight text-slate-900"
         >
           {portfolioData.name}
         </motion.h1>

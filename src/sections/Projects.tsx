@@ -1,6 +1,7 @@
 import { Section } from "../components/Section";
+import { motion } from "framer-motion";
 import { portfolioData } from "../data/portfolio";
-import { ExternalLink, Calendar, CheckCircle2 } from "lucide-react";
+import { ExternalLink, Calendar, CheckCircle2, PlayCircle } from "lucide-react";
 import { GithubIcon } from "../components/Icons";
 
 export const Projects = () => {
@@ -10,32 +11,49 @@ export const Projects = () => {
         <h2 className="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
         <div className="grid grid-cols-1 gap-12">
           {portfolioData.projects.map((project, index) => (
-            <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
+              key={index} 
+              className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start"
+            >
               {/* Project Image */}
-                                <a href={project.links.web} target="_blank" rel="noopener noreferrer">
-              <div className="glass-card p-0 overflow-hidden aspect-video bg-white flex items-start justify-center relative group border border-slate-100">
-                {project.image ? (
-                    <img src={project.image} alt={project.title} className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
-                ) : (
-                  <div className="text-slate-400 font-medium transition-transform duration-500 group-hover:scale-110">
-                    {project.title} Preview
-                  </div>
-                )}
+              <div className="glass-card p-0 overflow-hidden aspect-video bg-slate-50 flex items-start justify-center relative group">
+                {/* Main Image Link */}
+                <a href={project.links.demo || project.links.web || project.links.github} target="_blank" rel="noopener noreferrer" className="absolute inset-0 z-0 block">
+                  {project.image ? (
+                      <img src={project.image} alt={project.title} className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-slate-400 font-medium transition-transform duration-500 group-hover:scale-110">
+                      {project.title} Preview
+                    </div>
+                  )}
+                </a>
+
                 {/* Overlay with links on hover */}
-                <div className="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                  {project.links?.github && (
-                    <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="p-3 bg-white rounded-full text-slate-900 hover:scale-110 transition-transform">
-                      <GithubIcon size={20} />
-                    </a>
-                  )}
-                  {project.links?.demo && (
-                    <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="p-3 bg-white rounded-full text-slate-900 hover:scale-110 transition-transform">
-                      <ExternalLink size={20} />
-                    </a>
-                  )}
+                <div className="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20 pointer-events-none">
+                  <div className="flex items-center gap-4 pointer-events-auto">
+                    {project.links?.demo && (
+                      <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="px-4 py-3 bg-white rounded-full text-slate-900 hover:scale-110 transition-transform shadow-xl flex items-center gap-2 font-bold">
+                        <PlayCircle size={20} className="text-accent-cyan" />
+                        Watch Demo
+                      </a>
+                    )}
+                    {project.links?.github && (
+                      <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="p-3 bg-white rounded-full text-slate-900 hover:scale-110 transition-transform shadow-xl" title="Source Code">
+                        <GithubIcon size={20} />
+                      </a>
+                    )}
+                    {project.links?.web && (
+                      <a href={project.links.web} target="_blank" rel="noopener noreferrer" className="p-3 bg-white rounded-full text-slate-900 hover:scale-110 transition-transform shadow-xl" title="Live Site">
+                        <ExternalLink size={20} />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
-              </a>
 
               {/* Project Info */}
               <div>
@@ -63,7 +81,7 @@ export const Projects = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

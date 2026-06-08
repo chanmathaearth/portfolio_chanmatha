@@ -1,4 +1,5 @@
 import { Section } from "../components/Section";
+import { motion } from "framer-motion";
 import { portfolioData } from "../data/portfolio";
 import { GraduationCap, Award, Languages, Users, CheckCircle2 } from "lucide-react";
 import HccdaPic from "../assets/HWENDCTEDA884134.png";
@@ -12,7 +13,13 @@ export const Education = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           
           {/* Card 1: Education */}
-          <div className="glass-card rounded-3xl p-8 border border-slate-100 shadow-sm flex flex-col h-full">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+            className="glass-card rounded-3xl p-8 border border-slate-100 shadow-sm flex flex-col h-full"
+          >
             <h3 className="text-xl font-bold mb-8 flex items-center gap-3">
               <GraduationCap className="text-accent-blue" /> Education
             </h3>
@@ -30,10 +37,16 @@ export const Education = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Card 2: Certifications */}
-          <div className="glass-card rounded-3xl p-8 border border-slate-100 shadow-sm flex flex-col h-full">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+            className="glass-card rounded-3xl p-8 border border-slate-100 shadow-sm flex flex-col h-full"
+          >
             <h3 className="text-xl font-bold mb-8 flex items-center gap-3">
               <Award className="text-accent-purple" /> Certifications
             </h3>
@@ -62,10 +75,16 @@ export const Education = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           {/* Card 3: Activities & Involvement */}
-          <div className="glass-card rounded-3xl p-8 border border-slate-100 shadow-sm flex flex-col h-full">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+            className="glass-card rounded-3xl p-8 border border-slate-100 shadow-sm flex flex-col h-full"
+          >
             <h3 className="text-xl font-bold mb-8 flex items-center gap-3">
               <Users className="text-accent-purple" /> Activities & Involvement
             </h3>
@@ -81,10 +100,16 @@ export const Education = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Card 4: Languages */}
-          <div className="glass-card rounded-3xl p-8 border border-slate-100 shadow-sm flex flex-col h-full">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
+            className="glass-card rounded-3xl p-8 border border-slate-100 shadow-sm flex flex-col h-full"
+          >
             <h3 className="text-xl font-bold mb-8 flex items-center gap-3">
               <Languages className="text-accent-cyan" /> Languages
             </h3>
@@ -96,7 +121,7 @@ export const Education = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>

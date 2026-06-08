@@ -1,4 +1,5 @@
 import { Section } from "../components/Section";
+import { motion } from "framer-motion";
 import { portfolioData } from "../data/portfolio";
 import { Mail, Phone, Send } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../components/Icons";
@@ -16,7 +17,13 @@ export const Contact = () => {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 text-left">
-          <div className="backdrop-blur-md bg-white/5 border border-white/10 p-8 rounded-3xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+            className="backdrop-blur-md bg-white/5 border border-white/10 p-8 rounded-3xl"
+          >
             <h3 className="text-xl font-bold mb-6 text-white">Contact Info</h3>
             <div className="space-y-6">
               <a href={`mailto:${portfolioData.contact.email}`} className="flex items-center gap-4 text-slate-300 hover:text-white transition-colors group">
@@ -32,9 +39,15 @@ export const Contact = () => {
                 <span>{portfolioData.contact.phone}</span>
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="backdrop-blur-md bg-white/5 border border-white/10 p-8 rounded-3xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+            className="backdrop-blur-md bg-white/5 border border-white/10 p-8 rounded-3xl"
+          >
             <h3 className="text-xl font-bold mb-6 text-white">Socials</h3>
             <div className="space-y-6">
               <a href={portfolioData.contact.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-slate-300 hover:text-white transition-colors group">
@@ -50,10 +63,16 @@ export const Contact = () => {
                 <span>LinkedIn Profile</span>
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="flex flex-col items-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3, ease: "backOut" }}
+          className="flex flex-col items-center"
+        >
           <a
             href={`mailto:${portfolioData.contact.email}`}
             className="px-10 py-4 bg-white text-slate-900 rounded-full font-bold flex items-center gap-3 hover:scale-105 transition-transform shadow-xl shadow-accent-blue/10"
@@ -63,7 +82,7 @@ export const Contact = () => {
           <p className="mt-20 text-slate-500 text-sm">
             © {new Date().getFullYear()} {portfolioData.name}. Built with React, Tailwind & Framer Motion.
           </p>
-        </div>
+        </motion.div>
       </div>
     </Section>
   );

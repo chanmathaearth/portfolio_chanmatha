@@ -4,9 +4,10 @@ import studforceImg from "../assets/studforce.png";
 
 export const portfolioData: PortfolioData = {
   name: "Chanmatha Sanguansap",
-  role: "Junior Full-Stack Developer",
-  summary:
-    "Junior Full-Stack Developer with experience building and deploying real-world web applications and LINE-integrated systems for healthcare and operational workflows. Experienced in both frontend and backend development, including RESTful APIs, AI-integrated features, and containerized deployment. Fast learner with strong problem-solving skills, able to adapt quickly, leverage AI tools to improve development efficiency, and contribute effectively within development teams.",
+  role: "Full-Stack Developer",
+  tagline: "Aspiring Technical Business Analyst",
+summary:
+  "Full-Stack Developer with experience building real-world web applications and LINE-integrated systems. Skilled across the entire product lifecycle—from analyzing stakeholder pain points and gathering requirements to executing end-to-end development (RESTful APIs, UI, and AI integrations). A strong problem-solver who enjoys bridging the gap between business needs and technical implementation, with a keen interest in Technical Business Analysis.",
   contact: {
     phone: "0631174147",
     email: "chanmathaearth@gmail.com",
@@ -32,22 +33,22 @@ export const portfolioData: PortfolioData = {
     },
     {
       category: "Cloud",
-      skills: ["GCP", "Vercel"],
+      skills: ["GCP", "Vercel", "Render"],
     },
   ],
   projects: [
     {
       title: "Child Development Monitoring & Evaluation System",
       date: "Apr 2025 - Apr 2026",
-      description:
-        "Developed a full-stack child development monitoring system actively used by healthcare staff, in collaboration with the Faculty of Nursing, Burapha University.",
-      highlights: [
-    "Built a full-stack child development monitoring platform for healthcare staff to manage users, classrooms, child records, dashboards, and assessment workflows.",
-    "Developed weight and height assessment features with graph-based visualization based on Thai Ministry of Public Health growth standards.",
-    "Integrated LINE LIFF and Gemini LLM to build a parent-facing chatbot, allowing parents to securely access personalized child development data through LINE.",
-    "Replaced manual paper-based assessment workflows with a centralized web-based system, eliminating paper records and improving data accessibility for healthcare staff.",
-    "Deployed containerized applications using Docker on GCP VM and Vercel."
-      ],
+description:
+  "Led the end-to-end development of a child development monitoring system—from initial stakeholder pain point analysis to full-stack implementation, in collaboration with the Faculty of Nursing, Burapha University.",
+highlights: [
+  "Analyzed healthcare staff's pain points to replace manual paper-based assessment workflows with a centralized web-based system, eliminating paper records.",
+  "Designed and built a full-stack monitoring platform for healthcare staff to manage users, classrooms, child records, dashboards, and assessment workflows.",
+  "Implemented weight and height assessment features with graph-based visualization based on Thai Ministry of Public Health growth standards.",
+  "Integrated LINE LIFF and Gemini LLM to build a parent-facing chatbot, allowing parents to securely access personalized child development data through LINE.",
+  "Successfully deployed containerized applications using Docker on GCP VM and Vercel for production use."
+],
       tech: ["React", "Django REST Framework", "MySQL", "Docker", "GCP", "LINE API", "LIFF", "LLM Gemini"],
       links: {
         github: "https://github.com/chanmathaearth/Youthapp",
